@@ -1,14 +1,12 @@
 extends ./include/_layout
 block var
   - metas = {}
-  - metas.title = 'title'
-  - metas.url = 'url'
-  - metas.image = 'image'
-  - metas.site_name = 'site_name'
+  - metas.title = 'koka-portal-TOP'
+  - metas.site_name = 'koka-portal'
   - metas.description = 'description'
 block append meta
   +meta(metas)
 block title
-  title
+  title koka-portal-top
 block body
   p test top
