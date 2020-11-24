@@ -458,3 +458,189 @@ template {
 body {
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }
+
+footer {
+  padding: 20px 0;
+  margin-top: 120px;
+  background: #F9C2A3;
+}
+
+footer p {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-size: 13px;
+  color: #5D5D5D;
+}
+
+.hero {
+  background-image: url(/images/main.jpg);
+  background-size: cover;
+  background-position: center right;
+  padding: 0 40px;
+}
+
+.hero__inner {
+  height: 555px;
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hero__text {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+.hero__text h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 11px;
+}
+
+.hero__text h2 {
+  font-size: 37px;
+  font-weight: bold;
+}
+
+.introduction {
+  margin-top: 80px;
+  padding: 0 40px;
+}
+
+.introduction__inner {
+  background: #F9C2A3;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.introduction__text {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 45px 35px;
+}
+
+.introduction__title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.introduction__title:first-of-type {
+  margin-top: 0;
+}
+
+.introduction__description {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.introduction__pict {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  top: 0;
+  background-image: url(/images/img-cat01.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.nekochanList {
+  margin-top: 80px;
+  padding: 0 40px;
+}
+
+.nekochanList__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.nekochanList__cardOuter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nekochanList__card {
+  width: calc(25% - 30px);
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 13px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nekochanList__card:nth-of-type(n + 5) {
+  margin-top: 50px;
+}
+
+.nekochanList__card:nth-of-type(2n) .nekochanList__imege {
+  background-image: url(/images/img-cat03.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.nekochanList__card:nth-of-type(3n) .nekochanList__imege {
+  background-image: url(/images/img-cat04.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.nekochanList__card:nth-of-type(4n) .nekochanList__imege {
+  background-image: url(/images/img-cat01.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.nekochanList__imege {
+  padding-bottom: 66%;
+  background-image: url(/images/img-cat02.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.nekochanList__description {
+  padding: 20px;
+}
+
+.nekochanList__name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nekochanList__type {
+  margin-top: 15px;
+}
+
+.nekochanList__type span {
+  color: #0140B7;
+}
+
+.nekochanList__location {
+  margin-top: 5px;
+}
+
+.nekochanList__information {
+  margin: 0;
+}
+
+.nekochanList__limit {
+  color: #5D5D5D;
+  margin-top: 50px;
+}
+
+.nekochanList__number {
+  color: #fff;
+  font-weight: bold;
+  background: #939393;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
+}
