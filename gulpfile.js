@@ -9,9 +9,9 @@ const browserSync = require('browser-sync');
 
 //setting : paths
 const paths = {
-	'root'    : './dist/html/',
+	'root'    : './dist/',
 	'pug'     : './src/pug/**/*.pug',
-	'html'    : './dist/html/',
+	'html'    : './dist/',
 	'cssSrc'  : './src/scss/**/*.scss',
 	'cssDist'   : './dist/css/',
 	'jsSrc' : './src/js/**/*.js',
