@@ -6,7 +6,7 @@ var app = new Vue({
         {
           name:"遊ぶの大好きなキジシロ",
           type:"雑種", gender:"♂",
-          age:"子猫",
+          age:"子猫", ageDetail:"3ヶ月",
           location:"東京都 北区赤羽",
           limit:"2021年02月04日",
           number:"340150"

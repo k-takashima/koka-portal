@@ -644,3 +644,104 @@ footer p {
   border-radius: 5px;
   margin-top: 10px;
 }
+
+.ditail {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ditailInformation__bg {
+  position: fixed;
+  z-index: -1;
+  background: #F9C2A3;
+  width: 50%;
+  height: 100vh;
+  right: 0;
+  top: 0;
+}
+
+.ditailPhoto {
+  width: 50%;
+  padding: 50px;
+}
+
+.ditailPhoto__main {
+  padding-bottom: 66%;
+  background-image: url(/images/img-cat01.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.ditailPhoto__thm {
+  margin-top: 30px;
+}
+
+.ditailPhoto__thm ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ditailPhoto__thm li {
+  width: calc(20% - 20px);
+}
+
+.ditailPhoto__thm img {
+  width: 100%;
+}
+
+.ditailInformations {
+  width: 50%;
+  padding: 50px;
+}
+
+.ditailInformation__number {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ditailInformation__name {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.ditailInformation__information {
+  margin-top: 45px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ditailInformation__information table {
+  width: 100%;
+}
+
+.ditailInformation__information th, .ditailInformation__information td {
+  width: 20%;
+  padding: 10px 0;
+}
+
+.ditailInformation__catDescription {
+  margin-top: 45px;
+}
+
+.ditailInformation__catDescription th {
+  width: 150px;
+}
+
+.ditailInformation__catDescription td {
+  width: auto;
+}
+
+.ditailInformation__button {
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 45px;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}

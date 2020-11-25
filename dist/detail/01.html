@@ -11,7 +11,77 @@
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
-    <p>test 01</p>
+    <div class="ditail">
+      <div class="ditailInformation__bg"></div>
+      <section class="ditailPhoto">
+        <div class="ditailPhoto__main"></div>
+        <div class="ditailPhoto__thm">
+          <ul>
+            <li><img src="/images/img-thm01.png" alt=""></li>
+            <li><img src="/images/img-thm02.png" alt=""></li>
+            <li><img src="/images/img-thm03.png" alt=""></li>
+            <li><img src="/images/img-thm04.png" alt=""></li>
+            <li><img src="/images/img-thm05.png" alt=""></li>
+          </ul>
+        </div>
+      </section>
+      <section class="ditailInformations" id="nekochanList">
+        <div class="ditailInformation__names">
+          <p class="ditailInformation__number">募集番号：{{ nekochanInformation[0].number }} 掲載期限：{{ nekochanInformation[0].limit }} まで</p>
+          <h2 class="ditailInformation__name">{{ nekochanInformation[0].name }}</h2>
+        </div>
+        <div class="ditailInformation__information">
+          <table class="ditailInformation__catInformation">
+            <tr>
+              <th>現在所在地</th>
+              <td>{{ nekochanInformation[0].location }}</td>
+              <th>種類</th>
+              <td>{{ nekochanInformation[0].type }}</td>
+            </tr>
+            <tr>
+              <th>年齢</th>
+              <td>{{ nekochanInformation[0].age }}（{{ nekochanInformation[0].ageDetail }}）</td>
+              <th>ワクチン</th>
+              <td>未接種</td>
+            </tr>
+            <tr>
+              <th>去勢</th>
+              <td>去勢していません</td>
+            </tr>
+            <tr>
+              <th>単身者応募</th>
+              <td>不可</td>
+              <th>高齢者応募</th>
+              <td>不可</td>
+            </tr>
+          </table>
+          <table class="ditailInformation__catDescription">
+            <tr>
+              <th>募集経緯</th>
+              <td>ガリガリにやせて道にうずくまっていたため保護しました</td>
+            </tr>
+            <tr>
+              <th>性格・特徴</th>
+              <td>とても温厚な人が大好きな甘えん坊さんです<br>よく食べます<br>寂しがるので留守時間が短い方か遊び相手になりそうな先住猫さんがいるお家を希望します</td>
+            </tr>
+            <tr>
+              <th>健康状態</th>
+              <td>ノミダニ駆除済み<br>検便、駆虫1回済み<br>エイズ白血病陰性<br>元気ですがかなり痩せています</td>
+            </tr>
+            <tr>
+              <th>引き渡し方法</th>
+              <td>実際に会っていただきご縁を感じましたら家族に迎えてくださると嬉しいです</td>
+            </tr>
+            <tr>
+              <th>その他・備考</th>
+              <td>
+                 愛情いっばいで育ててくださる方<br>猫の飼えるお住まいの方<br>完全室内飼いをしてくださる方<br>時期が来ましたらワクチン接種、去勢手術をしてくださる方<br>ご家族の皆様が猫を飼うことに賛成している事<br>25才以上59才未満の方<br>脱走防止の対策をしっかりとしてくださる方<br>小学生未満のお子さんのいないご家庭<br><br>少しでも気になった方、ご連絡お待ちしています</td>
+            </tr>
+          </table>
+          <button class="ditailInformation__button">里親を申し出る 質問する</button>
+        </div>
+      </section>
+    </div>
     <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/js/scripts.js"></script>
