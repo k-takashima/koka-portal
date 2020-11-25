@@ -26,158 +26,22 @@ block body
           | この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字
       .introduction__pict
   
-  section.nekochanList
+  section.nekochanList#nekochanList
     .nekochanList__inner
       ul.nekochanList__cardOuter
-        li.nekochanList__card
-          .nekochanList__imege.nekochanList__imege--active
-          .nekochanList__description
-            h4.nekochanList__name
-              | 遊ぶの大好きなキジシロ
-            p.nekochanList__type
-              | 雑種
-              span ♂
-              | 子猫
-            p.nekochanList__location
-              | 東京都 北区赤羽
-
-            div.nekochanList__information
-              p.nekochanList__limit
-                | 2021年02月04日まで
-              .nekochanList__number
-                | 募集番号：340150
-                
-        li.nekochanList__card
-          .nekochanList__imege.nekochanList__imege--active
-          .nekochanList__description
-            h4.nekochanList__name
-              | 遊ぶの大好きなキジシロ
-            p.nekochanList__type
-              | 雑種
-              span ♂
-              | 子猫
-            p.nekochanList__location
-              | 東京都 北区赤羽
-
-            div.nekochanList__information
-              p.nekochanList__limit
-                | 2021年02月04日まで
-              .nekochanList__number
-                | 募集番号：340150
-                
-        
-        li.nekochanList__card
-          .nekochanList__imege.nekochanList__imege--active
-          .nekochanList__description
-            h4.nekochanList__name
-              | 遊ぶの大好きなキジシロ
-            p.nekochanList__type
-              | 雑種
-              span ♂
-              | 子猫
-            p.nekochanList__location
-              | 東京都 北区赤羽
-
-            div.nekochanList__information
-              p.nekochanList__limit
-                | 2021年02月04日まで
-              .nekochanList__number
-                | 募集番号：340150
-
-
-        li.nekochanList__card
-          .nekochanList__imege.nekochanList__imege--active
-          .nekochanList__description
-            h4.nekochanList__name
-              | 遊ぶの大好きなキジシロ
-            p.nekochanList__type
-              | 雑種
-              span ♂
-              | 子猫
-            p.nekochanList__location
-              | 東京都 北区赤羽
-
-            div.nekochanList__information
-              p.nekochanList__limit
-                | 2021年02月04日まで
-              .nekochanList__number
-                | 募集番号：340150
-
-
-        li.nekochanList__card
-          .nekochanList__imege.nekochanList__imege--active
-          .nekochanList__description
-            h4.nekochanList__name
-              | 遊ぶの大好きなキジシロ
-            p.nekochanList__type
-              | 雑種
-              span ♂
-              | 子猫
-            p.nekochanList__location
-              | 東京都 北区赤羽
-
-            div.nekochanList__information
-              p.nekochanList__limit
-                | 2021年02月04日まで
-              .nekochanList__number
-                | 募集番号：340150
-
-
-        li.nekochanList__card
-          .nekochanList__imege.nekochanList__imege--active
-          .nekochanList__description
-            h4.nekochanList__name
-              | 遊ぶの大好きなキジシロ
-            p.nekochanList__type
-              | 雑種
-              span ♂
-              | 子猫
-            p.nekochanList__location
-              | 東京都 北区赤羽
-
-            div.nekochanList__information
-              p.nekochanList__limit
-                | 2021年02月04日まで
-              .nekochanList__number
-                | 募集番号：340150
-
-
-        li.nekochanList__card
-          .nekochanList__imege.nekochanList__imege--active
-          .nekochanList__description
-            h4.nekochanList__name
-              | 遊ぶの大好きなキジシロ
-            p.nekochanList__type
-              | 雑種
-              span ♂
-              | 子猫
-            p.nekochanList__location
-              | 東京都 北区赤羽
-
-            div.nekochanList__information
-              p.nekochanList__limit
-                | 2021年02月04日まで
-              .nekochanList__number
-                | 募集番号：340150
-
-
-        li.nekochanList__card
-          .nekochanList__imege.nekochanList__imege--active
-          .nekochanList__description
-            h4.nekochanList__name
-              | 遊ぶの大好きなキジシロ
-            p.nekochanList__type
-              | 雑種
-              span ♂
-              | 子猫
-            p.nekochanList__location
-              | 東京都 北区赤羽
-
-            div.nekochanList__information
-              p.nekochanList__limit
-                | 2021年02月04日まで
-              .nekochanList__number
-                | 募集番号：340150
+        - for (var x = 0; x < 8; x++)
+          li.nekochanList__card
+            .nekochanList__imege.nekochanList__imege--active
+            .nekochanList__description
+              h4.nekochanList__name {{ nekochanInformation[#{x}].name }}
+              p.nekochanList__type
+                | {{ nekochanInformation[#{x}].type }}
+                span {{ nekochanInformation[#{x}].gender }}
+                | {{ nekochanInformation[#{x}].age }}
+              p.nekochanList__location {{ nekochanInformation[#{x}].location }}
+              .nekochanList__information
+                p.nekochanList__limit {{ nekochanInformation[#{x}].limit }}まで
+                .nekochanList__number 募集番号：{{ nekochanInformation[#{x}].number }}        
 
   footer
     p ©︎ Kisumi takashima
