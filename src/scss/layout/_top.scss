@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import "./layout/variable";
+
+.hero{
+  background-image: url(/images/main.jpg);
+  background-size: cover;
+  background-position: center right;
+  padding: 0 40px;
+
+  &__inner{
+    height: 555px;
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__text{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+
+    h1{
+      font-size: 60px;
+      font-weight: bold;
+      margin-top: 11px;
+    }
+
+    h2{
+      font-size: 37px;
+      font-weight: bold;
+    }
+  }
+}
+
+.introduction{
+  margin-top: 80px;
+  padding: 0 40px;
+
+  &__inner{
+    background: #F9C2A3;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__text{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 45px 35px;
+  }
+
+  &__title{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+    &:first-of-type{
+      margin-top: 0;
+    }
+  }
+
+  &__description{
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  &__pict{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    top: 0;
+    background-image: url(/images/img-cat01.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.nekochanList{
+  margin-top: 80px;
+  padding: 0 40px;
+
+  &__inner{
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__cardOuter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__card{
+    width: calc(25% - 30px);
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 13px;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.1);
+
+    &:nth-of-type(n + 5){
+      margin-top: 50px;
+    }
+
+    &:nth-of-type(2n){
+      .nekochanList__imege{
+        background-image: url(/images/img-cat03.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    &:nth-of-type(3n){
+      .nekochanList__imege{
+        background-image: url(/images/img-cat04.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    &:nth-of-type(4n){
+      .nekochanList__imege{
+        background-image: url(/images/img-cat01.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+
+  &__imege{
+    padding-bottom: 66%;
+    background-image: url(/images/img-cat02.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__description{
+    padding: 20px;
+  }
+
+  &__name{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__type{
+    margin-top: 15px;
+    span{
+      color: #0140B7;
+    }
+  }
+
+  &__location{
+    margin-top: 5px;
+  }
+
+  &__information{
+    margin: 0;
+  }
+
+  &__limit{
+    color: #5D5D5D;
+    margin-top: 50px;
+  }
+
+  &__number{
+    color: #fff;
+    font-weight: bold;
+    background: #939393;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+}

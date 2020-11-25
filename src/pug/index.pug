@@ -1,0 +1,47 @@
+extends ./include/_layout
+block var
+  - metas = {}
+  - metas.title = 'koka-portal-TOP'
+  - metas.site_name = 'koka-portal'
+  - metas.description = 'description'
+block append meta
+  +meta(metas)
+block title
+  title koka-portal-top
+block body
+  section.hero
+    .hero__inner
+      .hero__text
+        h2 里親募集
+        h1 猫の里親募集
+  
+  section.introduction
+    .introduction__inner
+      .introduction__text
+        h3.introduction__title 里親になるには
+        p.introduction__description
+          | この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字
+        h3.introduction__title 里親を募集するには
+        p.introduction__description
+          | この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字
+      .introduction__pict
+  
+  section.nekochanList#nekochanList
+    .nekochanList__inner
+      ul.nekochanList__cardOuter
+        - for (var x = 0; x < 8; x++)
+          li.nekochanList__card
+            .nekochanList__imege.nekochanList__imege--active
+            .nekochanList__description
+              h4.nekochanList__name {{ nekochanInformation[#{x}].name }}
+              p.nekochanList__type
+                | {{ nekochanInformation[#{x}].type }}
+                span {{ nekochanInformation[#{x}].gender }}
+                | {{ nekochanInformation[#{x}].age }}
+              p.nekochanList__location {{ nekochanInformation[#{x}].location }}
+              .nekochanList__information
+                p.nekochanList__limit {{ nekochanInformation[#{x}].limit }}まで
+                .nekochanList__number 募集番号：{{ nekochanInformation[#{x}].number }}        
+
+  footer
+    p ©︎ Kisumi takashima
