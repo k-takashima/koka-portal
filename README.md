@@ -19,17 +19,68 @@ npx gulp
 - sassのコンパイル
 - jsのバンドル化
 
-#### 3. 画像の圧縮
-デフォルトタスクにすると重くなり過ぎるので、別タスクとして切り分けています。
+#### ディレクトリ構造
 ```
-npx gulp imagemin
+koka-portal
+├─ dist
+│ ├─ css
+│ │ └─ main.css
+│ ├─ detail
+│ │ └─ 01.html
+│ ├─ images
+│ │ ├─ icon.png
+│ │ ├─ img-cat01.jpg
+│ │ ├─ img-cat02.jpg
+│ │ ├─ img-cat03.jpg
+│ │ ├─ img-cat04.jpg
+│ │ ├─ img-thm01.png
+│ │ ├─ img-thm02.png
+│ │ ├─ img-thm03.png
+│ │ ├─ img-thm04.png
+│ │ ├─ img-thm05.png
+│ │ └─ main.jpg
+│ ├─ index.html
+│ ├─ js
+│ │ └─ scripts.js
+├─ gulpfile.js
+├─ node_modules
+├─ package-lock.json
+├─ package.json
+├─ README.md
+└─ src
+  ├─ images
+  │ ├─ icon.png
+  │ ├─ img-cat01.jpg
+  │ ├─ img-cat02.jpg
+  │ ├─ img-cat03.jpg
+  │ ├─ img-cat04.jpg
+  │ ├─ img-thm01.png
+  │ ├─ img-thm02.png
+  │ ├─ img-thm03.png
+  │ ├─ img-thm04.png
+  │ ├─ img-thm05.png
+  │ └─ main.jpg
+  ├─ js
+  │ └─ scripts.js
+  ├─ pug
+  │ ├─ detail
+  │ │ └─ 01.pug
+  │ ├─ include
+  │ │ └─ _layout.pug
+  │ └─ index.pug
+  └─ scss
+    ├─ layout
+    │ ├─ _base.scss
+    │ ├─ _detail.scss
+    │ ├─ _reset.scss
+    │ ├─ _top.scss
+    │ └─ _variable.scss
+    └─ main.scss
 ```
 
-#### jsファイルについて
-- 新規にjsを生成した場合は、`webpack.config.js`内の下記のような箇所に追加してください。
+#### 命名規則
+- BEMを使用
 ```
-  entry: {
-        internship: ['./src/scripts/internship/main.js']
-  },
+1. BlockとElementをつなぐ場合は、アンダースコア2つでつなぐ
+2. Modifierにつなぐ場合は、ハイフン2つでつなぐ
 ```
-- htmlファイルにはdist以下に生成された必要なjsファイルを読み込ませてください
