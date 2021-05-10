@@ -80,3 +80,13 @@ var app = new Vue({
   }
 });
 
+function nekochanList_maxHeight(){
+  $('.nekochanList__cardOuter').each(function(i, box) {
+		var maxHeight = 0;
+		$(box).find('.nekochanList__detail').each(function() {
+			if ($(this).height() > maxHeight) maxHeight = $(this).height();
+		});
+		$(box).find('.nekochanList__detail').height(maxHeight);
+	});
+}
+nekochanList_maxHeight()
