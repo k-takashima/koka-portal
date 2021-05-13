@@ -191,10 +191,11 @@
     background: #fff;
 
     @media only screen and (min-width: 800px) {
-      width: calc(25% - 30px);
+      width: calc(25% - 20px);
+      margin-bottom: 0;
 
       &:nth-of-type(n + 5){
-        margin-top: 50px;
+        margin-top: 30px;
       }
 
       &:hover{

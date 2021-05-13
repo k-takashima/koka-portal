@@ -6,6 +6,9 @@ block var
   - metas.description = 'description'
 block append meta
   +meta(metas)
+block link
+  link(rel='stylesheet', href="/css/main.css")
+  link(rel='manifest', href="/manifest.json")
 block title
   title koka-portal-top
 block body
@@ -50,3 +53,16 @@ block body
 
   footer
     p ©︎ Kisumi takashima
+block end_of_body
+  script(src="//cdn.jsdelivr.net/npm/vue/dist/vue.js")
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+  script(src="/js/scripts.js")
+  script.
+      // service workerの登録関係
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service_worker.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+        });
+      }
