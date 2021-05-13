@@ -90,3 +90,11 @@ function nekochanList_maxHeight(){
 	});
 }
 nekochanList_maxHeight()
+
+
+window.onload = function () {
+  setTimeout(function(){
+    $('#loading').addClass('loaded');
+  },1500);
+};
+
