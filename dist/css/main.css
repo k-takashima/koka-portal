@@ -457,12 +457,26 @@ template {
 
 body {
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  background: #FDEEE7;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    background: #fff;
+  }
 }
 
 footer {
-  padding: 20px 0;
-  margin-top: 120px;
+  padding: 20px;
+  margin-top: 70px;
   background: #F9C2A3;
+}
+
+@media only screen and (min-width: 800px) {
+  footer {
+    padding: 20px 0;
+    margin-top: 120px;
+  }
 }
 
 footer p {
@@ -521,54 +535,97 @@ footer p {
 .hero {
   background-image: url(/images/main.jpg);
   background-size: cover;
-  background-position: center right;
-  padding: 0 40px;
+  background-position: 68% 50%;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 800px) {
+  .hero {
+    background-image: url(/images/main.jpg);
+    background-position: center right;
+    padding: 0 40px;
+  }
 }
 
 .hero__inner {
-  height: 555px;
+  height: 475px;
   position: relative;
   max-width: 1280px;
   margin: 0 auto;
 }
 
+@media only screen and (min-width: 800px) {
+  .hero__inner {
+    max-width: 1280px;
+    height: 555px;
+  }
+}
+
 .hero__text {
   position: absolute;
-  bottom: 50px;
+  bottom: 64px;
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
 }
 
+@media only screen and (min-width: 800px) {
+  .hero__text {
+    bottom: 50px;
+  }
+}
+
 .hero__text h1 {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: bold;
   margin-top: 11px;
 }
 
-.hero__text h2 {
-  font-size: 37px;
-  font-weight: bold;
+@media only screen and (min-width: 800px) {
+  .hero__text h1 {
+    font-size: 60px;
+  }
 }
 
 .introduction {
-  margin-top: 80px;
-  padding: 0 40px;
+  margin-top: -45px;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 800px) {
+  .introduction {
+    margin-top: 80px;
+    padding: 0 40px;
+  }
 }
 
 .introduction__inner {
-  background: #FDEEE7;
+  background: #fff;
   border-radius: 10px;
-  overflow: hidden;
-  max-width: 1280px;
   margin: 0 auto;
-  position: relative;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (min-width: 800px) {
+  .introduction__inner {
+    background: #FDEEE7;
+    border: none;
+    overflow: hidden;
+    max-width: 1280px;
+    position: relative;
+  }
 }
 
 .introduction__text {
-  width: 50%;
   box-sizing: border-box;
-  padding: 45px 35px;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 800px) {
+  .introduction__text {
+    padding: 45px 35px;
+    width: 50%;
+  }
 }
 
 .introduction__title {
@@ -588,19 +645,33 @@ footer p {
 }
 
 .introduction__pict {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  right: 0;
-  top: 0;
-  background-image: url(/images/img-cat01.jpg);
-  background-size: cover;
-  background-position: center;
+  display: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .introduction__pict {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    top: 0;
+    background-image: url(/images/img-cat01.jpg);
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .nekochanList {
-  margin-top: 80px;
-  padding: 0 40px;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 800px) {
+  .nekochanList {
+    margin-top: 80px;
+    padding: 0 40px;
+  }
 }
 
 .nekochanList__inner {
@@ -608,23 +679,34 @@ footer p {
   margin: 0 auto;
 }
 
-.nekochanList__cardOuter {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+@media only screen and (min-width: 800px) {
+  .nekochanList__cardOuter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .nekochanList__card {
-  width: calc(25% - 30px);
   border-radius: 5px;
   overflow: hidden;
   font-size: 13px;
   transition-duration: .4s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  background: #fff;
 }
 
-.nekochanList__card:nth-of-type(n + 5) {
-  margin-top: 50px;
+@media only screen and (min-width: 800px) {
+  .nekochanList__card {
+    width: calc(25% - 30px);
+  }
+  .nekochanList__card:nth-of-type(n + 5) {
+    margin-top: 50px;
+  }
+  .nekochanList__card:hover {
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .nekochanList__card:nth-of-type(2n) .nekochanList__imege {
@@ -643,10 +725,6 @@ footer p {
   background-image: url(/images/img-cat01.jpg);
   background-size: cover;
   background-position: center;
-}
-
-.nekochanList__card:hover {
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
 }
 
 .nekochanList__imege {

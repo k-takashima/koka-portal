@@ -49,53 +49,82 @@
 .hero{
   background-image: url(/images/main.jpg);
   background-size: cover;
-  background-position: center right;
-  padding: 0 40px;
+  background-position: 68% 50%;
+  padding: 0 20px;
+
+  @media only screen and (min-width: 800px) {
+    background-image: url(/images/main.jpg);
+    background-position: center right;
+    padding: 0 40px;
+  }
 
   &__inner{
-    height: 555px;
+    height: 475px;
     position: relative;
     max-width: 1280px;
     margin: 0 auto;
+
+    @media only screen and (min-width: 800px) {
+      max-width: 1280px;
+      height: 555px;
+    }
   }
 
   &__text{
     position: absolute;
-    bottom: 50px;
+    bottom: 64px;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
 
-    h1{
-      font-size: 60px;
-      font-weight: bold;
-      margin-top: 11px;
+    @media only screen and (min-width: 800px) {
+      bottom: 50px;
     }
 
-    h2{
-      font-size: 37px;
+    h1{
+      font-size: 40px;
       font-weight: bold;
+      margin-top: 11px;
+
+      @media only screen and (min-width: 800px) {
+        font-size: 60px;
+      }
     }
   }
 }
 
 .introduction{
-  margin-top: 80px;
-  padding: 0 40px;
+  margin-top: -45px;
+  padding: 0 20px;
+
+  @media only screen and (min-width: 800px) {
+    margin-top: 80px;
+    padding: 0 40px;
+  }
 
   &__inner{
-    background: #FDEEE7;
+    background: #fff;
     border-radius: 10px;
-    overflow: hidden;
-    max-width: 1280px;
     margin: 0 auto;
-    position: relative;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+
+    @media only screen and (min-width: 800px) {
+      background: #FDEEE7;
+      border: none;
+      overflow: hidden;
+      max-width: 1280px;
+      position: relative;
+    }
   }
 
   &__text{
-    width: 50%;
     box-sizing: border-box;
-    padding: 45px 35px;
+    padding: 20px;
+
+    @media only screen and (min-width: 800px) {
+      padding: 45px 35px;
+      width: 50%;
+    }
   }
 
   &__title{
@@ -115,20 +144,30 @@
   }
 
   &__pict{
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    right: 0;
-    top: 0;
-    background-image: url(/images/img-cat01.jpg);
-    background-size: cover;
-    background-position: center;
+    display: none;
+
+    @media only screen and (min-width: 800px) {
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      right: 0;
+      top: 0;
+      background-image: url(/images/img-cat01.jpg);
+      background-size: cover;
+      background-position: center;
+    }
   }
 }
 
 .nekochanList{
-  margin-top: 80px;
-  padding: 0 40px;
+  margin-top: 30px;
+  padding: 0 20px;
+
+  @media only screen and (min-width: 800px) {
+    margin-top: 80px;
+    padding: 0 40px;
+  }
 
   &__inner{
     max-width: 1280px;
@@ -136,21 +175,33 @@
   }
 
   &__cardOuter{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
+    @media only screen and (min-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
   }
 
   &__card{
-    width: calc(25% - 30px);
     border-radius: 5px;
     overflow: hidden;
     font-size: 13px;
     transition-duration: .4s;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    background: #fff;
 
-    &:nth-of-type(n + 5){
-      margin-top: 50px;
+    @media only screen and (min-width: 800px) {
+      width: calc(25% - 30px);
+
+      &:nth-of-type(n + 5){
+        margin-top: 50px;
+      }
+
+      &:hover{
+        box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+      }
     }
 
     &:nth-of-type(2n){
@@ -175,10 +226,6 @@
         background-size: cover;
         background-position: center;
       }
-    }
-
-    &:hover{
-      box-shadow: 0 5px 18px rgba(0,0,0,0.1);
     }
   }
 

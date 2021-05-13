@@ -3,12 +3,22 @@
 
 body {
   font-family: $fonts;
+  background: #FDEEE7;
+
+  @media only screen and (min-width: 800px) {
+    background: #fff;
+  }
 }
 
 footer{
-  padding: 20px 0;
-  margin-top: 120px;
+  padding: 20px;
+  margin-top: 70px;
   background: #F9C2A3;
+
+  @media only screen and (min-width: 800px) {
+    padding: 20px 0;
+    margin-top: 120px;
+  }
 
   p{
     max-width: 1280px;
