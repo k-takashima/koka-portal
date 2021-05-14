@@ -94,7 +94,11 @@ nekochanList_maxHeight()
 
 window.onload = function () {
   setTimeout(function(){
+    $('.spinner img').addClass('loaded');
+    $('.spinner').addClass('loaded');
+  },1300);
+  setTimeout(function(){
     $('#loading').addClass('loaded');
-  },1500);
+  },2550);
 };
 
