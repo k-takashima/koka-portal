@@ -82,17 +82,25 @@ var app = new Vue({
 
 function nekochanList_maxHeight(){
   $('.nekochanList__cardOuter').each(function(i, box) {
+    var winWidth = $(window).width();
 		var maxHeight = 0;
-		$(box).find('.nekochanList__detail').each(function() {
-			if ($(this).height() > maxHeight) maxHeight = $(this).height();
-		});
-		$(box).find('.nekochanList__detail').height(maxHeight);
+    if(winWidth > 799){
+      $(box).find('.nekochanList__detail').each(function() {
+        if ($(this).height() > maxHeight) maxHeight = $(this).height();
+      });
+      $(box).find('.nekochanList__detail').height(maxHeight);
+    }
+    else{
+      $('.nekochanList__detail').height('auto');
+    }
 	});
 }
-nekochanList_maxHeight()
 
+$(window).on('load resize', function(){
+  nekochanList_maxHeight()
+});
 
-window.onload = function () {
+$(window).on('load', function(){
   setTimeout(function(){
     $('.spinner img').addClass('loaded');
     $('.spinner').addClass('loaded');
@@ -100,5 +108,5 @@ window.onload = function () {
   setTimeout(function(){
     $('#loading').addClass('loaded');
   },2550);
-};
+});
 

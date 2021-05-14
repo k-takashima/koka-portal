@@ -713,10 +713,11 @@ footer p {
 
 @media only screen and (min-width: 800px) {
   .nekochanList__card {
-    width: calc(25% - 30px);
+    width: calc(25% - 20px);
+    margin-bottom: 0;
   }
   .nekochanList__card:nth-of-type(n + 5) {
-    margin-top: 50px;
+    margin-top: 30px;
   }
   .nekochanList__card:hover {
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
